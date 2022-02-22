@@ -1,0 +1,55 @@
+{
+    "pizzas": {
+      "sabores": [
+        {
+          "id": 1,
+          "tipo": "Margherita"
+        },
+        {
+          "id": 2,
+          "tipo": "4 Queijos"
+        },
+        {
+          "id": 3,
+          "tipo": "Peperone"
+        },
+        {
+          "id": 4,
+          "tipo": "Portuguesa"
+        },
+        {
+            "id": 5,
+            "tipo": "Toscana"
+          }
+      ],
+      "bordas": [
+        {
+          "id": 1,
+          "tipo": "Philadelphia"
+        },
+        {
+          "id": 2,
+          "tipo": "Cheddar"
+        },
+        {
+          "id": 3,
+          "tipo": "Catupiry"
+        }
+      ]
+    },
+    "status": [
+      {
+        "id": 1,
+        "tipo": "Solicitado"
+      },
+      {
+        "id": 2,
+        "tipo": "Em produção"
+      },
+      {
+        "id": 3,
+        "tipo": "Finalizado"
+      }
+    ],
+    "orders": []
+  }
