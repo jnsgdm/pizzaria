@@ -1,12 +1,16 @@
 <template>
   <div class="main-container">
-    <h1>This is an about page</h1>
+    <PizzaGrid/>
   </div>
 </template>
 
 <script>
+import PizzaGrid from '../components/PizzaGrid.vue'
 
 export default {
-  name:"Status"  
+  name:"Status",
+  components:{
+    PizzaGrid
+  }
 }
 </script>

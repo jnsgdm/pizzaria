@@ -17,15 +17,24 @@
                         </option>
                     </select>
                 </div>
-                <div class="input-container">
+                <!--<div class="input-container">
                     <label class="title-label" id="borda-title" for="borda">Selecione o recheio da borda: </label>
                     <div id="radio-container" v-for="borda in bordas" :key="borda.id" :value="borda.tipo">
                         <input type="radio" name="txtsexo" :id="borda.id">
                         <label :for="borda.id">{{borda.tipo}}</label>
                     </div>
-                </div>
+                    </div>-->
+                    <div class="input-container">
+                        <label class="title-label" for="borda">Escolha o sabor:</label>
+                    <select name="borda" id="borda" v-model="borda">
+                        <option value="">--</option>
+                        <option v-for="borda in bordas" :key="borda.id" :value="borda.tipo">
+                            {{borda.tipo}}
+                        </option>
+                    </select>
+                    </div>
                 <div class="input-container">
-                    <input type="submit" class="submit-btn" value="pedir uma pizza">
+                    <input type="submit" class="submit-btn" value="Finalizar pedido">
                 </div>
             </form>
         </div>
@@ -61,7 +70,8 @@ export default {
             this.bordas = res.bordas;   
         },
         async postOrder(e){
-            e.preventDefault();
+
+            e.preventDefault()
 
             const order = {
                 nome: this.nome,
@@ -80,12 +90,11 @@ export default {
 
             const res = await req.json();
             console.log(res);
-
             this.msg = `Pedido feito com sucesso, ${res.nome}!`;
 
             setTimeout(() => {
                 this.msg = ''
-            }, 3000);
+            }, 2000);
 
             this.nome = '';
             this.sabor = '';

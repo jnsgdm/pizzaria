@@ -45,10 +45,6 @@
       },
       {
         "id": 3,
-        "tipo": "Catupiry"
-      },
-      {
-        "id": 4,
         "tipo": "Sem recheio"
       }
     ]
@@ -69,32 +65,25 @@
   ],
   "orders": [
     {
-      "nome": "teste",
-      "sabor": "Peperone",
-      "borda": null,
+      "nome": "Cliente3",
+      "sabor": "4 Queijos",
+      "borda": "Sem recheio",
       "status": "Solicitado",
       "id": 1
     },
     {
-      "nome": "teste",
-      "sabor": "Margherita",
+      "nome": "Cliente4",
+      "sabor": null,
       "borda": null,
       "status": "Solicitado",
       "id": 2
     },
     {
-      "nome": "Jonas",
-      "sabor": "Peperone",
-      "borda": null,
+      "nome": "Cliente4",
+      "sabor": "",
+      "borda": "",
       "status": "Solicitado",
       "id": 3
-    },
-    {
-      "nome": "Cliente1",
-      "sabor": "Brócolis",
-      "borda": null,
-      "status": "Solicitado",
-      "id": 4
     }
   ]
 }
