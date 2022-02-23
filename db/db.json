@@ -73,17 +73,10 @@
     },
     {
       "nome": "Cliente4",
-      "sabor": null,
-      "borda": null,
+      "sabor": "4 Queijos",
+      "borda": "Philadelphia",
       "status": "Solicitado",
       "id": 2
-    },
-    {
-      "nome": "Cliente4",
-      "sabor": "",
-      "borda": "",
-      "status": "Solicitado",
-      "id": 3
     }
   ]
 }

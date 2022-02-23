@@ -85,7 +85,7 @@ export default {
         width: 5%;
     }
     select{
-        padding: 12px 6px;
+        padding: 4px;
         margin-right: 12px;
         width: 50%;
     }
