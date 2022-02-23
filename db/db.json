@@ -1,55 +1,86 @@
 {
-    "pizzas": {
-      "sabores": [
-        {
-          "id": 1,
-          "tipo": "Margherita"
-        },
-        {
-          "id": 2,
-          "tipo": "4 Queijos"
-        },
-        {
-          "id": 3,
-          "tipo": "Peperone"
-        },
-        {
-          "id": 4,
-          "tipo": "Portuguesa"
-        },
-        {
-            "id": 5,
-            "tipo": "Toscana"
-          }
-      ],
-      "bordas": [
-        {
-          "id": 1,
-          "tipo": "Philadelphia"
-        },
-        {
-          "id": 2,
-          "tipo": "Cheddar"
-        },
-        {
-          "id": 3,
-          "tipo": "Catupiry"
-        }
-      ]
-    },
-    "status": [
+  "pizzas": {
+    "sabores": [
       {
         "id": 1,
-        "tipo": "Solicitado"
+        "sabor": "Margherita"
       },
       {
         "id": 2,
-        "tipo": "Em produção"
+        "sabor": "4 Queijos"
       },
       {
         "id": 3,
-        "tipo": "Finalizado"
+        "sabor": "Peperone"
+      },
+      {
+        "id": 4,
+        "sabor": "Portuguesa"
+      },
+      {
+        "id": 5,
+        "sabor": "Toscana"
+      },
+      {
+        "id": 6,
+        "sabor": "Calabresa"
+      },
+      {
+        "id": 7,
+        "sabor": "Brócolis"
+      },
+      {
+        "id": 8,
+        "sabor": "Bauru"
       }
     ],
-    "orders": []
-  }
+    "bordas": [
+      {
+        "id": 1,
+        "tipo": "Philadelphia"
+      },
+      {
+        "id": 2,
+        "tipo": "Cheddar"
+      },
+      {
+        "id": 3,
+        "tipo": "Catupiry"
+      },
+      {
+        "id": 4,
+        "tipo": "Sem recheio"
+      }
+    ]
+  },
+  "status": [
+    {
+      "id": 1,
+      "tipo": "Solicitado"
+    },
+    {
+      "id": 2,
+      "tipo": "Em produção"
+    },
+    {
+      "id": 3,
+      "tipo": "Finalizado"
+    }
+  ],
+  "orders": [
+    {
+      "nome": "teste",
+      "sabor": "Peperone",
+      "borda": null,
+      "status": "Solicitado",
+      "id": 1
+    },
+    {
+      "nome": "teste",
+      "sabor": "Margherita",
+      "borda": null,
+      "status": "Solicitado",
+      "id": 2
+    }
+  ]
+}

@@ -1,6 +1,5 @@
 <template>
   <div class="main-container">
-    <h1>Faça seu pedido: </h1>
     <PizzaForm/>
   </div>
 </template>
