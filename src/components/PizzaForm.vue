@@ -3,6 +3,7 @@
         <div>
             <form id="pizza-form" @submit="postOrder($event)">
                 <h1>Faça seu pedido</h1>
+                <Mensage :msg="msg" v-show="msg"/>
                 <div class="input-container">
                     <label class="title-label" for="nome">Nome cliente:</label>
                     <input type="text" id="nome" name="nome" v-model="nome" placeholder="Digite seu nome">
@@ -32,6 +33,8 @@
 </template>
 
 <script>
+import Mensage from '../components/Mensage.vue'
+
 export default {
     name: "PizzaForm",
     data(){
@@ -78,14 +81,23 @@ export default {
             const res = await req.json();
             console.log(res);
 
-            
+            this.msg = `Pedido feito com sucesso, ${res.nome}!`;
+
+            setTimeout(() => {
+                this.msg = ''
+            }, 3000);
+
+            this.nome = '';
+            this.sabor = '';
+            this.borda = '';
+
         }
     },
     mounted(){
         this.getPizzas();
     },
     components:{
-
+        Mensage
     }
 
 }
