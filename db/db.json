@@ -65,18 +65,25 @@
   ],
   "orders": [
     {
-      "nome": "Cliente3",
-      "sabor": "4 Queijos",
-      "borda": "Sem recheio",
+      "nome": "Cliente1",
+      "sabor": "Margherita",
+      "borda": "Philadelphia",
       "status": "Solicitado",
       "id": 1
     },
     {
-      "nome": "Cliente4",
+      "nome": "Cliente2",
+      "sabor": "Peperone",
+      "borda": "Cheddar",
+      "status": "Finalizado",
+      "id": 3
+    },
+    {
+      "nome": "Jonas",
       "sabor": "4 Queijos",
-      "borda": "Philadelphia",
-      "status": "Solicitado",
-      "id": 2
+      "borda": "Sem recheio",
+      "status": "Em produção",
+      "id": 4
     }
   ]
 }

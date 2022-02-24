@@ -25,7 +25,7 @@
                     </div>
                     </div>-->
                     <div class="input-container">
-                        <label class="title-label" for="borda">Escolha o sabor:</label>
+                        <label class="title-label" for="borda">Escolha o sabor da borda:</label>
                     <select name="borda" id="borda" v-model="borda">
                         <option value="">--</option>
                         <option v-for="borda in bordas" :key="borda.id" :value="borda.tipo">
@@ -81,7 +81,7 @@ export default {
             }
 
             const orderJson = JSON.stringify(order)
-
+             //especifico do json server
             const req = await fetch("http://localhost:3000/orders",{
                 method: "POST",
                 headers: {"Content-type":"application/json"},

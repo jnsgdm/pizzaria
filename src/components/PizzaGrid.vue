@@ -17,10 +17,12 @@
                 <div>{{order.sabor}}</div>
                 <div>{{order.borda}}</div>
                 <div class="acoes">
-                    <select name="status" id="status">
-                        <option value="">--</option>
+                    <select name="status" id="status" @change="updateOrder($event,order.id)">
+                        <option v-for="st in status" :key="st.id" :value="st.tipo" :selected="order.status == st.tipo">
+                            {{st.tipo}}
+                        </option>
                     </select>
-                    <button class="delete-btn">Cancelar</button>
+                    <button class="delete-btn" @click="deleteOrder(order.id)">Cancelar</button>
                 </div>
             </div>
         </div>
@@ -37,18 +39,51 @@ export default {
         }
     },
     methods:{
-        async getPizzas(){
+        async getOrders(){
             const req = await fetch("http://localhost:3000/orders");
             const res = await req.json();
   
             this.orders = res
             console.log(this.orders);
 
-            //status
+        },
+        async getStatus(){
+            const req = await fetch("http://localhost:3000/status");
+            const res = await req.json();
+
+            this.status = res
+            console.log(this.status);
+
+        },
+        async deleteOrder(orderId){
+            //especifico do json server
+            const req = await fetch(`http://localhost:3000/orders/${orderId}`,{
+                method: "DELETE"
+            });
+
+            const res = await req.json();
+            //refresh page
+            this.getOrders();
+
+        },
+        async updateOrder(event,orderId){
+            const selectedStatus = event.target.value;
+
+            const resJson = JSON.stringify({status: selectedStatus});
+
+            const req = await fetch(`http://localhost:3000/orders/${orderId}`,{
+                method: "PATCH",
+                headers: {"Content-Type": "application/json"},
+                body: resJson
+            });
+
+            const res = await req.json();
         }
     },
     mounted(){
-        this.getPizzas();
+        this.getOrders();
+        //status
+        this.getStatus();
     }
         
 }
@@ -87,7 +122,7 @@ export default {
     select{
         padding: 4px;
         margin-right: 12px;
-        width: 50%;
+        width: 55%;
     }
     .delete-btn{
         background-color: tomato;
