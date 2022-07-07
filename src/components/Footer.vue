@@ -1,7 +1,9 @@
 <template>
-  <footer id="footer">
-      <p id="content-footer">A Pizzaria &copy; 2022</p>
-  </footer>
+  <div>
+    <footer id="footer">
+        <p id="content-footer">A Pizzaria &copy; 2022</p>
+    </footer>
+  </div>
 </template>
 
 <script>
@@ -11,18 +13,25 @@ export default {
 </script>
 
 <style scoped>
+  div{
+    margin-top: -80px;
+    width: 100%;
+    height: 40px;
+    bottom: 0;
+  }
   #footer{
-    height: 80px;
     background-color: tomato;
     border-top: 4px solid rgba(255, 99, 71, 0.815);
     color: azure;
-    margin: 0 auto;
+    bottom: 0;
     width: 100%;
+    height: 100%;
   }
   #content-footer{
-    margin-top: 20px;
+    margin-top: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 0.9rem;
   }
 </style>

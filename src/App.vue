@@ -1,17 +1,14 @@
 <template>
   <Navbar :logo="logo_src" :alt="app_name"/>
   <router-view/>
-  <Footer/>
 </template>
 
 <script>
 import Navbar from './components/Navbar.vue'
-import Footer from './components/Footer.vue'
 
 export default {
   components:{
-    Navbar, 
-    Footer
+    Navbar
   },
   data(){
     return{

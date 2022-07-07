@@ -68,14 +68,14 @@
       "nome": "Cliente1",
       "sabor": "Margherita",
       "borda": "Philadelphia",
-      "status": "Solicitado",
+      "status": "Em produção",
       "id": 1
     },
     {
       "nome": "Cliente2",
       "sabor": "Peperone",
       "borda": "Cheddar",
-      "status": "Finalizado",
+      "status": "Em produção",
       "id": 3
     },
     {
@@ -84,6 +84,13 @@
       "borda": "Sem recheio",
       "status": "Em produção",
       "id": 4
+    },
+    {
+      "nome": "Jonas",
+      "sabor": "Peperone",
+      "borda": "Philadelphia",
+      "status": "Solicitado",
+      "id": 5
     }
   ]
 }

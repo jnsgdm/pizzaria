@@ -14,19 +14,22 @@
       </div>
     </div>
   </div>
+  <Footer/>
 </template>
 
 <script>
 import Banner from '../components/Banner.vue'
 import Btn from '../components/Btn.vue'
 import Liner from '../components/Liner.vue'
+import Footer from '../components/Footer.vue'
 
 export default {
   name: 'Home',
   components: {
     Banner,
     Btn,
-    Liner
+    Liner,
+    Footer
   }
 }
 </script>

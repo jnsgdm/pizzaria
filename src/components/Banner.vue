@@ -14,7 +14,7 @@ export default {
 <style scoped>
 
     #banner{
-        background-image: url('/img/pizza.jpg');
+        background-image: url('../../public/img/pizza.jpg');
         background-position: 0 -250px;
         background-size: cover;
         height: 500px;
